@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(), BasicView {
+
     private lateinit var btnClickMe : Button
     private lateinit var presenter: BasicPresenter
 
@@ -20,10 +21,19 @@ class MainActivity : AppCompatActivity(), BasicView {
         setContentView(R.layout.activity_main)
 
         presenter = BasicModel(this)
+
         btnClickMe = btn
+
+        presenter.datas()
+
         btnClickMe.setOnClickListener {
             presenter.clickMe()
         }
+
+    }
+
+    override fun datasa(text: String) {
+        txt.text = text
     }
 
     override fun clickSuccess(text: String) {

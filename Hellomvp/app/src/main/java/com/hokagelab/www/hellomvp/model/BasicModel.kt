@@ -10,7 +10,12 @@ class BasicModel(private val basicView: BasicView) :
         basicView.clickSuccess(helloTag)
     }
 
+    override fun datas(){
+        basicView.datasa(nama)
+    }
+
     companion object {
         val helloTag = "Hello, MVP Kotlin!"
+        val nama = "Hai Kotlin"
     }
 }
