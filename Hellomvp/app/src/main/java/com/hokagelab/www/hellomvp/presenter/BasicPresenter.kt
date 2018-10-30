@@ -1,5 +1,5 @@
 package com.hokagelab.www.hellomvp.presenter
 
-interface BasicPresenter{
-    fun clickMe()
+open class BasicPresenter{
+    open fun clickMe() {}
 }
